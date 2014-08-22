@@ -8,4 +8,11 @@
 using std::vector;
 using std::string;
 
+#define PARTCHAR '#'
+
+#define CARRIER 5
+#define DESTROYER 4
+#define CRUISER 3
+#define GUNBOAT 2
+
 #endif

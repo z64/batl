@@ -1,14 +1,15 @@
-#include <ncurses/ncurses.h>
-
+#include "global.h"
+#include "ship.h"
 
 int main() {
 
 	initscr();
 
-	printw("test");
+	Ship ship(5,5,'r',3,"testShip");
+	ship.draw();
+
 	refresh();
 	getch();
-
 
 	endwin();
 	return 0;

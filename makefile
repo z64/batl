@@ -2,7 +2,7 @@
 CC=g++
 CFLAGS=-c -I. 
 LDFLAGS=-lncurses 
-SOURCES=main.cpp
+SOURCES=main.cpp ship.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=batl
 
