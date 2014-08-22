@@ -9,6 +9,7 @@ using std::vector;
 using std::string;
 
 #define PARTCHAR '#'
+#define HITCHAR 'X'
 
 #define CARRIER 5
 #define DESTROYER 4

@@ -10,6 +10,7 @@ shipPart::shipPart(int a, int b) {
 Ship::Ship(int a, int b, char d, int l, string n) {
 
 	name = n;
+	hp = l;
 
 	int xslope = 0 ,yslope =0;
 
@@ -54,4 +55,23 @@ void Ship::draw() {
 
 	}
 
+	mvprintw(0,0,"%s,%d",name.c_str(),hp);
+
+}
+
+bool Ship::isHit(int a, int b) {
+
+	for(int i = 0; i < parts.size(); i++) {
+
+		if( (parts[i].x == a) && (parts[i].y == b) ) {
+				
+				parts[i].d = HITCHAR;
+				hp--;
+				return true;
+
+		}
+
+	}
+	
+	return false;
 }
