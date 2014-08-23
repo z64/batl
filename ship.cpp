@@ -75,3 +75,9 @@ bool Ship::isHit(int a, int b) {
 	
 	return false;
 }
+
+int Ship::getHP() {
+
+	return hp;
+
+}

@@ -28,6 +28,7 @@ public:
 
 	void draw();
 	bool isHit(int,int);
+	int getHP();
 
 };
 

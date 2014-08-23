@@ -1,25 +1,21 @@
 #include "global.h"
-#include "ship.h"
+#include "player.h"
 
 int main() {
 
 	initscr();
 	curs_set(0);
 
-	Ship ship(5,5,'r',CARRIER,"testShip");
-	ship.draw();
+	printw("playerdev");
 
-	Ship ship1(5,25,'u',CRUISER,"testCruiser");
-	ship1.draw();
+	Player player1("adam");
+	player1.addShip(new Ship(5,4,'r',CRUISER,"myShip"));
+	player1.addShip(new Ship(7,10,'d',CARRIER,"myShip"));
 
-	Ship ship2(15,5,'d',GUNBOAT,"testGunboat");
-	ship2.draw();
-	refresh();
-	getch();
+	player1.isHit(5,4);
+	player1.isHit(20,20);
 
-	ship2.isHit(15,5);
-	ship2.isHit(15,6);
-	ship2.draw();
+	player1.draw();
 
 	refresh();
 	getch();
