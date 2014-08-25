@@ -29,6 +29,14 @@ bool Player::isHit(int x, int y) {
 
 	}
 
-	mvaddch(y,x,MISSCHAR);
+	for(int i = 0; i <= y; i++) {
+
+		usleep(5000);
+		clear();
+		draw();
+		mvaddch(i,x,MISSCHAR);
+		refresh();
+	}
+
 	return false;
 }

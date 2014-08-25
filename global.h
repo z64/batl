@@ -4,6 +4,7 @@
 #include <ncurses/ncurses.h>
 #include <vector>
 #include <string>
+#include <unistd.h>
 
 using std::vector;
 using std::string;
