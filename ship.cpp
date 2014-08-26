@@ -55,7 +55,7 @@ void Ship::draw() {
 
 	}
 
-	mvprintw(0,0,"%s,%d",name.c_str(),hp);
+//	mvprintw(0,0,"%s,%d",name.c_str(),hp); //debug to print ship name, hp
 
 }
 

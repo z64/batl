@@ -8,8 +8,6 @@ int main() {
 	initscr();
 
 	Player player("adam");
-//	player1.addShip(new Ship(5,4,'r',CRUISER,"myShip"));
-//	player1.addShip(new Ship(7,10,'d',CARRIER,"myShip"));
 
 	for(int i = 1; i < 2; i++) {
 
@@ -25,9 +23,11 @@ int main() {
 	int a,b;
 	while( (a > -1) && (b > -1) ) {
 
-		mvprintw(0,0,"X: 2  Y: 3");
+		mvprintw(0,0,"X: ");
+		mvprintw(1,0,"Y: ");
 		mvscanw(0,3,"%d",&a);
-		mvscanw(0,9,"%d",&b);
+		mvscanw(1,3,"%d",&b);
+		clear();
 
 		player.isHit(a,b);
 		player.draw();
