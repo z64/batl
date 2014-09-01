@@ -17,6 +17,13 @@ void Player::draw() {
 	}
 }
 
+void Player::drawHit() {
+
+	for(int i = 0; i < ships.size(); i++) {
+
+		ships[i]->drawHit();
+	}
+}
 bool Player::isHit(int x, int y) {
 
 	for(int i = 0; i < ships.size(); i++) {

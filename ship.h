@@ -27,6 +27,7 @@ public:
 	Ship(int,int,char,int,string);
 
 	void draw();
+	void drawHit();
 	bool isHit(int,int);
 	int getHP();
 

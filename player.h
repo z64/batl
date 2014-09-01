@@ -20,6 +20,7 @@ public:
 	void addShip(Ship*);
 	bool isHit(int,int);
 	void draw();
+	void drawHit();
 
 };
 

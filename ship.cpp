@@ -59,6 +59,20 @@ void Ship::draw() {
 
 }
 
+void Ship::drawHit() {
+
+	for(int i = 0; i < parts.size(); i++) {
+
+		if(parts[i].d == HITCHAR) {
+
+			mvaddch(parts[i].y, parts[i].x, parts[i].d);
+
+		}
+
+	}
+
+}
+
 bool Ship::isHit(int a, int b) {
 
 	for(int i = 0; i < parts.size(); i++) {

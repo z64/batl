@@ -34,6 +34,8 @@ int main() {
 
 	}
 
+	clear();
+	player.drawHit();
 
 	refresh();
 	getch();
