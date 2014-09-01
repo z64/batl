@@ -1,5 +1,5 @@
 #include "global.h"
-#include "player.h"
+#include "game.h"
 
 Ship* getShip();
 
@@ -7,35 +7,7 @@ int main() {
 
 	initscr();
 
-	Player player("adam");
-
-	for(int i = 1; i < 2; i++) {
-
-
-		mvprintw(0,0,"ship entry: %d",i);
-		player.addShip(getShip());
-
-		clear();
-		player.draw();
-
-	}
-
-	int a,b;
-	while( (a > -1) && (b > -1) ) {
-
-		mvprintw(0,0,"X: ");
-		mvprintw(1,0,"Y: ");
-		mvscanw(0,3,"%d",&a);
-		mvscanw(1,3,"%d",&b);
-		clear();
-
-		player.isHit(a,b);
-		player.draw();
-
-	}
-
-	clear();
-	player.drawHit();
+	new Game();
 
 	refresh();
 	getch();
