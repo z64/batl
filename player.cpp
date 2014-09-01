@@ -40,10 +40,12 @@ bool Player::isHit(int x, int y) {
 
 		usleep(5000);
 		clear();
-		draw();
+//		draw();
 		mvaddch(i,x,MISSCHAR);
 		refresh();
 	}
 
 	return false;
 }
+
+int Player::getHP() { return hp; }

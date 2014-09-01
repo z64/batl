@@ -21,6 +21,7 @@ public:
 	bool isHit(int,int);
 	void draw();
 	void drawHit();
+	int getHP();
 
 };
 

@@ -2,6 +2,10 @@
 
 Game::Game() {
 
+	state = ENTRY;
+	time = 0;
+	turn = 0;
+
 	//1. get players
 	for(int i = 1; i <= PLAYERS; i++) {
 		
@@ -43,14 +47,42 @@ Game::Game() {
 		getch();
 
 	}
+
+	clear();
+	Play();
 }
 
 bool Game::Play() {
 
 	//1. select player
-	//2. get move
-	//3. check win
+	int x,y;
 
+	while(1) {
+
+		clear();
+		mvprintw(0,0,"Player 1's turn");
+		mvprintw(1,0,"X: ");
+		mvprintw(2,0,"Y: ");
+		mvscanw(1,3,"%d",&x);
+		mvscanw(2,3,"%d",&y);
+		players[1]->isHit(x,y);
+		players[1]->drawHit();
+		getch();
+
+		if(players[1]->getHP() == 0) return false;
+
+		clear();
+		mvprintw(0,0,"Player 2's turn");
+		mvprintw(1,0,"X: ");
+		mvprintw(2,0,"Y: ");
+		mvscanw(1,3,"%d",&x);
+		mvscanw(2,3,"%d",&y);
+		players[0]->isHit(x,y);
+		players[0]->drawHit();
+		getch();
+
+		if(players[0]->getHP() == 0) return true;
+	}
 }
 
 
