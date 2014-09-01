@@ -13,6 +13,7 @@ private:
 	bool turn;
 	vector<Player*> players;
 	void draw(Player*);
+	Ship* getShip(int);
 
 public:
 
