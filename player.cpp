@@ -1,6 +1,6 @@
 #include "player.h"
 
-Player::Player(string n) { name = n; }
+Player::Player(string n) { name = n; hp=0; }
 
 void Player::addShip(Ship* ship) {
 

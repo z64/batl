@@ -60,7 +60,7 @@ bool Game::Play() {
 	while(1) {
 
 		clear();
-		mvprintw(0,0,"Player 1's turn");
+		mvprintw(0,0,"Player 1's (%d) turn");
 		mvprintw(1,0,"X: ");
 		mvprintw(2,0,"Y: ");
 		mvscanw(1,3,"%d",&x);
